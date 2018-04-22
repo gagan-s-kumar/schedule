@@ -7,7 +7,11 @@ function Worker(params) {
 
 export default function Workers(params) {
   let workers = _.map(params.workers, (uu) => <Worker key={uu.id} worker={uu} />);
+  if(params.token) {
   return <div>
     { workers }
   </div>;
+  } else {
+    return <div></div>;
+  }
 }

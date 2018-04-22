@@ -27,20 +27,20 @@ let Taskspa = connect((state) => state)((props) => {
         <Nav />
         <Route path="/" exact={true} render={() =>
           <div>
-            <JobForm />
+            <JobForm token={props.token}/>
             <Feed jobs={props.jobs} props={props}/>
           </div>
         } />
         <Route path="/workers" exact={true} render={() =>
           <div>
            <WorkerForm />
-           <Workers workers={props.workers} />
+           <Workers workers={props.workers} token={props.token}/>
          </div>
         } />
         <Route path="/workers/:worker_id" render={({match}) =>
           <Feed jobs={_.filter(props.jobs, (pp) =>
             match.params.worker_id == pp.worker.id )
-          } />
+          } props={props}/>
         } />
         <Route path="/jobs/:job_id" render={({match}) =>
           <EditForm job={_.filter(props.jobs, (pp) =>

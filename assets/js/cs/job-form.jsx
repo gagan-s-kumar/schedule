@@ -31,6 +31,8 @@ function JobForm(props) {
   }
 
   let workers = _.map(props.workers, (uu) => <option key={uu.id} value={uu.id}>{uu.name}</option>);
+  //console.log("props.token->", props.token);
+  if(props.token) {
   return <div style={{padding: "4ex"}}>
     <h2>New Job</h2>
     <FormGroup>
@@ -54,6 +56,9 @@ function JobForm(props) {
     <Button onClick={submit} color="primary">Create Job</Button> &nbsp;
     <Button onClick={clear}>Clear</Button>
   </div>;
+  } else {
+    return <div></div>;
+  }
 }
 
 function state2props(state) {
