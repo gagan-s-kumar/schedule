@@ -22,6 +22,7 @@ function WorkerForm(props) {
   function submit(ev) {
     api.submit_worker(props.form);
     //console.log(props.form);
+    alert("Worker Created! Login to continue");
   }
 
   function clear(ev) {

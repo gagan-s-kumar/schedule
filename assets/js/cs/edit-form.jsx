@@ -30,6 +30,7 @@ function EditForm(params) {
     //console.log("Callin edit");
     //console.log(props.form);
     api.request_jobs();
+    alert("Job edited");
   }
 
   function close(ev) {
@@ -44,6 +45,7 @@ function EditForm(params) {
     //console.log("Callin close");
     //console.log(props.form);
     api.request_jobs();
+    alert("Job closed");
   }
 
   function open(ev) {
@@ -58,6 +60,7 @@ function EditForm(params) {
     //console.log("Callin open");
     //console.log(props.form);
     api.request_jobs();
+    alert("Job opened");
   }
 
   function job_delete(ev) {

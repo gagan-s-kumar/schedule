@@ -21,6 +21,9 @@ function JobForm(props) {
 
   function submit(ev) {
     api.submit_job(props.form);
+    if(props.form.duration % 15 == 0) {
+       alert("Job created");
+    }
     //console.log(props.form);
   }
 
