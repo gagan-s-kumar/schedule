@@ -48,8 +48,8 @@ function JobForm(props) {
       <Input type="textarea" name="description" value={props.form.description} onChange={update} />
     </FormGroup>
     <FormGroup>
-      <Label for="duration">Duration</Label>
-      <Input type="number" name="duration" value={props.form.duration} onChange={update} />
+      <Label for="duration">Duration in mins</Label>
+      <Input type="number" name="duration" step="15" min="0" value={props.form.duration} onChange={update} />
     </FormGroup>
     <Button onClick={submit} color="primary">Create Job</Button> &nbsp;
     <Button onClick={clear}>Clear</Button>

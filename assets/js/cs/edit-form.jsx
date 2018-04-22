@@ -97,8 +97,8 @@ function EditForm(params) {
       <Input type="number" name="duration" value={props.form.duration} onChange={update} />
       <div className="old"> Current Duration: { job.duration }</div>
     </FormGroup>
-    <Button onClick={close} color="primary">Close Without Edit</Button> &nbsp;
-    <Button onClick={open} color="primary">Open Without Edit</Button> &nbsp;
+    <Button onClick={close} color="primary">Close Job</Button> &nbsp;
+    <Button onClick={open} color="primary">Open Job</Button> &nbsp;
     <Button onClick={edit} color="primary">Edit Task</Button> &nbsp;
     <Button onClick={clear}>Clear</Button>
   </div>;
